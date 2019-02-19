@@ -40,6 +40,8 @@ function login(user) {
             // Redact the password and activation code before logging
             requestbody.password = '[redacted]';
             body.user.vehicle_details.activation_code = '[redacted]';
+            for (i = 0; i < body.user.associated_vehicles.length; i++)
+                body.user.associated_vehicles[i].activation_code = '[redacted]';
 
             client.query(
                 'INSERT INTO ZeServicesLog (username, requesturl, requestmethod, requestbody, requesttimestamp, responsebody, responsetimestamp) VALUES ($1::text, $2::text, $3::text, $4::json, $5::timestamp, $6::json, $7::timestamp)',
