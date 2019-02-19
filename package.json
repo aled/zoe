@@ -1,0 +1,23 @@
+{
+  "name": "zoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "GetBatteryStatus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aled/zoe.git"
+  },
+  "author": "aled <aled@wibblr.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/aled/zoe/issues"
+  },
+  "homepage": "https://github.com/aled/zoe#readme",
+  "dependencies": {
+    "pg": "^7.8.0",
+    "request": "^2.88.0"
+  }
+}
