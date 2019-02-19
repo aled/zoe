@@ -1,0 +1,9 @@
+{
+    "databaseConfig" : {
+        "user": "zoe",
+        "host": "localhost",
+        "database": "zoe",
+        "password": "[redacted]",
+        "port": 5432
+    }
+}
