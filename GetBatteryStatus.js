@@ -69,9 +69,10 @@ function getBatteryStatus(username, token, vin) {
         method: method,
         auth: { 'bearer': token }
     }, function(error, response, body) {
+        console.log(body);
         client.query(
             'INSERT INTO ZeServicesLog (username, requesturl, requestmethod, requestbody, requesttimestamp, responsebody, responsetimestamp) VALUES ($1::text, $2::text, $3::text, $4::json, $5::timestamp, $6::json, $7::timestamp)',
-            [username, url, method, null, requestTimestamp, JSON.stringify(body), new Date().toISOString()],
+            [username, url, method, null, requestTimestamp, body, new Date().toISOString()],
             (err, res) => {
                 console.log(err ? err.stack : 'OK');
                 client.end();
